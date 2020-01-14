@@ -3,6 +3,7 @@ package cn.infomany.model;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.*;
+import java.util.Date;
 
 public class CommRequest {
 
@@ -25,6 +26,10 @@ public class CommRequest {
     @Digits(integer = 2, fraction = 5, message = "[digit]不符合固定")
     private float digit;
 
-    public CommRequest() {
-    }
+    @Email(message = "[email]格式有误")
+    private String myEmail;
+
+    @PastOrPresent(message = "[birth]只能是过去的时间")
+    private Date birth;
+
 }
