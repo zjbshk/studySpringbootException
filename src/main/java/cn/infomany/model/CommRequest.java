@@ -19,10 +19,10 @@ public class CommRequest {
     @PositiveOrZero(message = "[width]必须为正数或零")
     private long width;
 
-    @AssertTrue(message = "必须要是正数")
+    @AssertTrue(message = "[sex]必须要是正数")
     private boolean sex;
 
-    @Digits(integer = 2, fraction = 5, message = "digit不符合固定")
+    @Digits(integer = 2, fraction = 5, message = "[digit]不符合固定")
     private float digit;
 
     public CommRequest() {
