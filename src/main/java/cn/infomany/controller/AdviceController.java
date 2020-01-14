@@ -3,10 +3,12 @@ package cn.infomany.controller;
 import cn.infomany.common.constant.BizExceptionEnum;
 import cn.infomany.common.exception.BusinessException;
 import cn.infomany.common.response.AjaxResult;
+import cn.infomany.model.CommRequest;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -46,8 +48,8 @@ public class AdviceController {
     }
 
 
-    @GetMapping("/hello")
-    public String hello() {
+    @GetMapping("/parameterCheck")
+    public String parameterCheck(@Valid CommRequest commRequest) {
         return "HelloWorld";
     }
 
