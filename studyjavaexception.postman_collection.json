@@ -1,0 +1,929 @@
+{
+	"info": {
+		"_postman_id": "092c4607-6677-4ddb-ade5-5e303fbf7ad9",
+		"name": "studyjavaexception",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "数学运算异常",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Cookie",
+						"value": "ksfjldksjflsk ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8080/mathematicalOperationException",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"mathematicalOperationException"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "数学运算异常",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Cookie",
+								"value": "ksfjldksjflsk ",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8080/mathematicalOperationException",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"mathematicalOperationException"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Jan 2020 04:05:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 500,\n    \"msg\": \"/ by zero\",\n    \"data\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "空指针异常",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Cookie",
+						"value": "ksfjldksjflsk ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8080/nullPointerException",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"nullPointerException"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "空指针异常",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Cookie",
+								"value": "ksfjldksjflsk ",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8080/nullPointerException",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"nullPointerException"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Jan 2020 04:08:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 500,\n    \"msg\": null,\n    \"data\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "测试业务异常",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json",
+						"disabled": true
+					},
+					{
+						"key": "Cookie",
+						"type": "text",
+						"value": "ksfjldksjflsk ",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8080/businessException",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"businessException"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "测试业务异常",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "Cookie",
+								"type": "text",
+								"value": "ksfjldksjflsk ",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8080/businessException",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"businessException"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Jan 2020 04:09:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 2,\n    \"msg\": \"用户没有找到\",\n    \"data\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "请求体用对象接收并检验",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "ksfjldksjflsk ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"age\": 12,\r\n    \"name\": \"zjb\",\r\n    \"sex\": true,\r\n    \"myEmail\": \"151215@qq\",\r\n    \"birth\":\"2021\",\r\n    \"digit\":55.5,\r\n    \"width\":10,\r\n    \"height\":12\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/objParameterCheck",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"objParameterCheck"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "媒体类型不支持",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Cookie",
+								"value": "ksfjldksjflsk ",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"age\": 12,\r\n    \"name\": \"zjb\",\r\n    \"sex\": true,\r\n    \"myEmail\": \"151215@qq\",\r\n    \"birth\":\"2021\",\r\n    \"digit\":55.5,\r\n    \"width\":10,\r\n    \"height\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/objParameterCheck",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"objParameterCheck"
+							]
+						}
+					},
+					"status": "Unsupported Media Type",
+					"code": 415,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Jan 2020 04:13:29 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 415,\n    \"msg\": \"Content type 'application/octet-stream' not supported\",\n    \"data\": null\n}"
+				},
+				{
+					"name": "请求方法不支持",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Cookie",
+								"value": "ksfjldksjflsk ",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"age\": 12,\r\n    \"name\": \"zjb\",\r\n    \"sex\": true,\r\n    \"myEmail\": \"151215@qq\",\r\n    \"birth\":\"2021\",\r\n    \"digit\":55.5,\r\n    \"width\":10,\r\n    \"height\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/objParameterCheck",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"objParameterCheck"
+							]
+						}
+					},
+					"status": "Method Not Allowed",
+					"code": 405,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Jan 2020 04:12:56 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 405,\n    \"msg\": \"该接口不支持GET方法,支持[POST]方法\",\n    \"data\": null\n}"
+				},
+				{
+					"name": "所有情况都ok",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "ksfjldksjflsk ",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"age\": 12,\r\n    \"name\": \"zjb\",\r\n    \"sex\": true,\r\n    \"myEmail\": \"151215@qq\",\r\n    \"birth\":\"2021\",\r\n    \"digit\":55.5,\r\n    \"width\":10,\r\n    \"height\":12\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/objParameterCheck",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"objParameterCheck"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "10"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Jan 2020 04:14:03 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "HelloWorld"
+				}
+			]
+		},
+		{
+			"name": "头部字段检验",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "this is a cookie",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8080/missingType",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"missingType"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "请求ok",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "this is a cookie",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8080/missingType",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"missingType"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "16"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Jan 2020 04:17:50 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "this is a cookie"
+				},
+				{
+					"name": "请求头部缺少字段",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Cookie",
+								"value": "ksfjldksjflsk ",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8080/missingType",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"missingType"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Jan 2020 04:16:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 400,\n    \"msg\": \"请求头部缺少字段[cookie]\",\n    \"data\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "请求参数检验",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "this is a token",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8080/directInspection?cookie=this is a cookie",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"directInspection"
+					],
+					"query": [
+						{
+							"key": "cookie",
+							"value": "this is a cookie"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "请求ok",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "this is a token",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8080/directInspection?cookie=this is a cookie",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"directInspection"
+							],
+							"query": [
+								{
+									"key": "cookie",
+									"value": "this is a cookie"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "31"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Jan 2020 04:21:56 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "this is a cookiethis is a token"
+				},
+				{
+					"name": "请求头部缺少字段",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "this is a cookie",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8080/directInspection?cookie=this is a cookie",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"directInspection"
+							],
+							"query": [
+								{
+									"key": "cookie",
+									"value": "this is a cookie"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Jan 2020 04:21:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 400,\n    \"msg\": \"请求头部缺少字段[token]\",\n    \"data\": null\n}"
+				},
+				{
+					"name": "注意：请求缺少参数，不是头部 缺少",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "this is a cookie",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8080/directInspection",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"directInspection"
+							],
+							"query": [
+								{
+									"key": "cookie",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Jan 2020 04:19:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 400,\n    \"msg\": \"请求缺少参数[cookie]\",\n    \"data\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "请求参数直接在方法参数中检验",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "this is a token"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8080/parameterCheck?cookie=123",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"parameterCheck"
+					],
+					"query": [
+						{
+							"key": "cookie",
+							"value": "123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "请求参数直接在方法参数中检验1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "this is a token"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8080/parameterCheck1?cookie=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"parameterCheck1"
+					],
+					"query": [
+						{
+							"key": "cookie",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

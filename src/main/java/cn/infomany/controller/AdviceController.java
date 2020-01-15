@@ -48,7 +48,7 @@ public class AdviceController {
      */
     @GetMapping("/businessException")
     public List<String> businessException() {
-        throw new BusinessException(BizExceptionEnum.METHOD_NOT_FOUND);
+        throw new BusinessException(BizExceptionEnum.USER_NOT_FOUND);
     }
 
 
