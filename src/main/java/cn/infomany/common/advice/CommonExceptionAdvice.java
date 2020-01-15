@@ -12,6 +12,7 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.HttpMediaTypeNotSupportedException;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.MissingRequestHeaderException;
 import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -21,6 +22,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
 import javax.validation.ValidationException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 
 
@@ -40,8 +43,10 @@ public class CommonExceptionAdvice {
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(MissingServletRequestParameterException.class)
     public AjaxResult handleMissingServletRequestParameterException(MissingServletRequestParameterException e) {
-        logger.error("缺少请求参数");
-        return new AjaxResult(HttpStatus.BAD_REQUEST.value(), e.getMessage());
+        logger.error("请求缺少参数");
+
+        String msg = String.format("请求缺少参数[%s]", e.getParameterName());
+        return new AjaxResult(HttpStatus.BAD_REQUEST.value(), msg);
     }
 
     /**
@@ -51,7 +56,22 @@ public class CommonExceptionAdvice {
     @ExceptionHandler(HttpMessageNotReadableException.class)
     public AjaxResult handleHttpMessageNotReadableException(HttpMessageNotReadableException e) {
         logger.error("参数解析失败");
-        return new AjaxResult(HttpStatus.BAD_REQUEST.value(), e.getMessage());
+
+        String msg = e.getCause() == null ? e.getMessage() : e.getCause().getMessage();
+        Map<String, String> map = new HashMap<String, String>() {
+            {
+                put("Required request body is missing", "Required request body is missing");
+            }
+        };
+
+        for (Map.Entry<String, String> kv : map.entrySet()) {
+            String key = kv.getKey();
+            if (e.getMessage() != null && e.getMessage().contains(key)) {
+                msg = kv.getValue();
+            }
+        }
+
+        return new AjaxResult(HttpStatus.BAD_REQUEST.value(), msg);
     }
 
     /**
@@ -65,7 +85,7 @@ public class CommonExceptionAdvice {
         FieldError error = result.getFieldError();
         String field = error.getField();
         String code = error.getDefaultMessage();
-        String message = String.format("%s:%s", field, code);
+        String message = String.format("[%s]:%s", field, code);
         return new AjaxResult(HttpStatus.BAD_REQUEST.value(), message);
     }
 
@@ -114,7 +134,8 @@ public class CommonExceptionAdvice {
     @ExceptionHandler(HttpRequestMethodNotSupportedException.class)
     public AjaxResult handleHttpRequestMethodNotSupportedException(HttpRequestMethodNotSupportedException e) {
         logger.error("不支持当前请求方法");
-        return new AjaxResult(HttpStatus.METHOD_NOT_ALLOWED.value(), e.getMessage());
+        String msg = String.format("该接口不支持%s方法,支持%s方法", e.getMethod(), e.getSupportedHttpMethods());
+        return new AjaxResult(HttpStatus.METHOD_NOT_ALLOWED.value(), msg);
     }
 
     /**
@@ -123,7 +144,7 @@ public class CommonExceptionAdvice {
     @ResponseStatus(HttpStatus.UNSUPPORTED_MEDIA_TYPE)
     @ExceptionHandler(HttpMediaTypeNotSupportedException.class)
     public AjaxResult handleHttpMediaTypeNotSupportedException(Exception e) {
-        logger.error("不支持当前媒体类型");
+        logger.error("不支持当前媒体类型{}", e.getMessage());
         return new AjaxResult(HttpStatus.UNSUPPORTED_MEDIA_TYPE.value(), e.getMessage());
     }
 
@@ -133,20 +154,22 @@ public class CommonExceptionAdvice {
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ExceptionHandler(BusinessException.class)
     public AjaxResult handleServiceException(BusinessException e) {
-        logger.error("业务逻辑异常");
+        logger.error("业务逻辑异常:{}", e.getMessage());
         return new AjaxResult(e.getCode(), e.getMessage());
     }
 
-
     /**
-     * 操作数据库出现异常:名称重复，外键关联
+     * 头丢失异常
      */
-//    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-//    @ExceptionHandler(DataIntegrityViolationException.class)
-//    public AjaxResult handleException(DataIntegrityViolationException e) {
-//        logger.error("操作数据库出现异常:");
-//        return new AjaxResult(HttpStatus.INTERNAL_SERVER_ERROR.value(), e.getMessage());
-//    }
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ExceptionHandler(MissingRequestHeaderException.class)
+    public AjaxResult missingRequestHeaderException(MissingRequestHeaderException e) {
+        logger.error("头丢失异常:{}", e.getMessage());
+
+        String msg = String.format("请求头部缺少字段[%s]", e.getHeaderName());
+        return new AjaxResult(HttpStatus.BAD_REQUEST.value(), msg);
+    }
+
 
     /**
      * 通用异常,最后一道防御
@@ -154,7 +177,7 @@ public class CommonExceptionAdvice {
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ExceptionHandler(Exception.class)
     public AjaxResult handleException(Exception e) {
-        logger.error("通用异常");
+        logger.error("通用异常:{}", e.getMessage());
         return new AjaxResult(HttpStatus.INTERNAL_SERVER_ERROR.value(), e.getMessage());
     }
 }

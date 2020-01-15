@@ -43,6 +43,13 @@
             <scope>test</scope>
         </dependency>
 
+        <!--    java开发的工具包，使得类更加简洁    -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
     </dependencies>
 
     <build>
