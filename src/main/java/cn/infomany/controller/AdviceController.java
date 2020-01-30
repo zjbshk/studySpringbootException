@@ -4,6 +4,7 @@ import cn.infomany.common.constant.BizExceptionEnum;
 import cn.infomany.common.exception.BusinessException;
 import cn.infomany.common.response.AjaxResult;
 import cn.infomany.model.CommRequest;
+import cn.infomany.validator.IdentityCardNumber;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -96,5 +97,14 @@ public class AdviceController {
         return id;
     }
 
+    /**
+     * 下面
+     * @param idCard
+     * @return
+     */
+    @GetMapping("/idCard")
+    public String testIdCard(@IdentityCardNumber @RequestParam String idCard) {
+        return idCard;
+    }
 
 }
