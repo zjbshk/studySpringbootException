@@ -98,7 +98,7 @@ public class AdviceController {
     }
 
     /**
-     * 下面
+     * 自定义参数检验
      * @param idCard
      * @return
      */
