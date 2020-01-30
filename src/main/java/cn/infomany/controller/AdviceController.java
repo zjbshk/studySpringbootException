@@ -84,4 +84,17 @@ public class AdviceController {
     public String parameterCheck1(@NotBlank(message = "[cookie]不能为空") @Pattern(regexp = "\\d+", message = "不匹配") @RequestParam(required = false) String cookie) {
         return cookie;
     }
+
+    /**
+     * 用法是：路径变量:正则表达式。
+     * 当请求URI不满足正则表达式时，
+     * 客户端将收到404错误码。
+     * 不方便的地方是，不能通过捕获异常的方式，向前端返回统一的、自定义格式的响应参数
+     */
+    @GetMapping("/path/{id:[0-9]{3,4}}")
+    public String testPathVai(@PathVariable String id) {
+        return id;
+    }
+
+
 }
